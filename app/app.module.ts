@@ -1,12 +1,11 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }   from './app.component';
-import { KegComponent } from './keg.component';
-import {BoardComponent } from './board.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [ BrowserModule ],
-  declarations: [ AppComponent, KegComponent, BoardComponent ],
+  imports: [ BrowserModule, FormsModule, ReactiveFormsModule],
+  declarations: [ AppComponent],
   bootstrap:    [ AppComponent ]
 })
 
