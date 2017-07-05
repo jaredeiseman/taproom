@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Keg } from "./keg.model";
 
 @Component({
   selector: 'app-root',
   template: `
   <h1>Mason Jarsten</h1>
+  <h2>Editable Keg List</h2>
   <table>
     <tr *ngFor="let currentKeg of kegs">
       <td>Name: <span [hidden]="currentKeg.editing">{{currentKeg.name}}</span><input [hidden]="!currentKeg.editing" [(ngModel)]="currentKeg.name" type="text"></td>
@@ -16,19 +18,20 @@ import { NgForm } from '@angular/forms';
     </tr>
     </table>
     <h2>Add new keg</h2>
-  <form #addKegForm="ngForm" (ngSubmit)="addKeg(addKegForm); false">
-    <label for="name">Beer Name</label>
-    <input type="text" name="name" ngModel>
-    <label for="price">Price</label>
-    <input type="number" name="price" step="any" ngModel>
-    <label for="brand">Brand</label>
-    <input type="text" name="brand" ngModel>
-    <label for="alcohol-content">Alcohol Content</label>
-    <input type="number" name="alcohol-content" step="any" ngModel>
-    <label for="type">Style</label>
-    <input type="text" name="type" ngModel>
-    <button type="submit">Submit</button>
-  </form>
+    <form #addKegForm="ngForm" (ngSubmit)="addKeg(addKegForm); false">
+      <label for="name">Beer Name</label>
+      <input type="text" name="name" ngModel>
+      <label for="price">Price</label>
+      <input type="number" name="price" step="any" ngModel>
+      <label for="brand">Brand</label>
+      <input type="text" name="brand" ngModel>
+      <label for="alcohol-content">Alcohol Content</label>
+      <input type="number" name="alcohol-content" step="any" ngModel>
+      <label for="type">Style</label>
+      <input type="text" name="type" ngModel>
+      <button type="submit">Submit</button>
+    </form>
+    <keg-list [childKegList]="kegs"></keg-list>
   `
 })
 
@@ -50,15 +53,4 @@ export class AppComponent {
       this.kegs[id].editing = false;
     }
   }
-}
-
-export class Keg {
-  public pintsLeft: number = 124;
-  public editing: boolean = false;
-  constructor(public name: string,
-              public price: number,
-              public brand: string,
-              public alcoholContent: number,
-              public type: string,
-              public id: number) {}
 }
