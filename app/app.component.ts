@@ -5,11 +5,12 @@ import { Keg } from "./keg.model";
 @Component({
   selector: 'app-root',
   template: `
-  <h1>Mason Jarsten</h1>
-
+  <div class="container">
+    <img src="/resources/images/logo-white.png" alt="baller logo" class="logo-img">
     <keg-list [childKegList]="kegs"></keg-list>
     <add-keg (clickSender)="pushKeg($event)"></add-keg>
     <edit-keg [childKegList]="kegs"></edit-keg>
+  </div>
   `
 })
 
