@@ -12,6 +12,7 @@ import { Keg } from "./keg.model";
       <td>Price: {{currentKeg.price}}</td>
       <td>Alcohol Content: {{currentKeg.alcoholContent}}</td>
       <td>Type: {{currentKeg.type}}</td>
+      <td>Pints: {{currentKeg.pintsLeft}}</td>
     </tr>
   </table>
   `

@@ -5,6 +5,5 @@ export class Keg {
               public price: number,
               public brand: string,
               public alcoholContent: number,
-              public type: string,
-              public id: number) {}
+              public type: string) {}
 }
