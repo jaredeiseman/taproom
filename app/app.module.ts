@@ -6,10 +6,12 @@ import { KegListComponent }  from './keg-list.component';
 import { AddKegComponent } from './add-keg.component';
 import { EditKegComponent } from './editable-list.component';
 import { PosComponent } from './pos.component';
+import { BeerTypePipe } from './beertype.pipe';
+import { UniquePipe } from './uniquevalues.pipe';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, ReactiveFormsModule],
-  declarations: [ AppComponent, KegListComponent, AddKegComponent, EditKegComponent, PosComponent ],
+  declarations: [ AppComponent, KegListComponent, AddKegComponent, EditKegComponent, PosComponent, BeerTypePipe, UniquePipe ],
   bootstrap:    [ AppComponent ]
 })
 

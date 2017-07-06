@@ -24,7 +24,11 @@ import { Customer } from './customer.model';
         <button [class.active]="customer === selectedCustomer"(click)="selectCustomer(customer);" *ngFor="let customer of customers">{{customer.name}}</button>
       </div>
       <div class="beer-pos">
-        <button *ngFor="let beer of childKegList" style="border: 1px solid white" (click)="addPint(beer); subtractPint(beer);">{{beer.name}}</button>
+        <select (change)="onChange($event.target.value)">
+          <option value="all">All</option>
+          <option *ngFor="let beer of childKegList" value="{{beer.type}}">{{beer.type}}</option>
+        </select>
+        <button *ngFor="let beer of childKegList | beertype:filterByType" style="border: 1px solid white" (click)="addPint(beer); subtractPint(beer);">{{beer.name}}</button>
       </div>
     </div>
   `
@@ -33,9 +37,13 @@ import { Customer } from './customer.model';
 export class PosComponent {
   @Input() childKegList: Keg[];
 
-  customers: Customer[] = [new Customer("Jared"), new Customer("Kristen"), new Customer("Eunice"), new Customer("Fanny")];
+  customers: Customer[] = [];
   selectedCustomer = null;
+  filterByType = "all";
 
+  onChange(option) {
+    this.filterByType = option;
+  }
   subtractPint(keg) {
     if (keg.pintsLeft > 0) {
       keg.pintsLeft -= 1;

@@ -21,16 +21,15 @@ import { Keg } from "./keg.model";
 
 export class AppComponent {
   kegs: Keg[] = [
-    new Keg('Guinness Draught', 5.00, 'Guiness', 4.2, 'stout'),
-    new Keg('Organic Chocolate Stout', 5.00, 'Sam Smith', 5, 'Stout'),
-    new Keg('Belgian White Ale', 5.00, 'Blue Moon', 5.4, 'Witbier'),
-    new Keg('Apricot Ale', 5.00, 'Pyramid', 5.1, 'Fruit Beer'),
-    new Keg('Black Butte', 5.00, 'Deschutes', 5.2, 'Porter'),
-    new Keg('Duchesse De Bourgogne', 5.00, 'Brouwerij Verhaeghe', 6, 'Red Ale'),
+    // new Keg('Guinness Draught', 5.00, 'Guiness', 4.2, 'stout'),
+    new Keg('Organic Chocolate Stout', 5.00, 'Sam Smith', 5, 'stout'),
+    new Keg('Belgian White Ale', 5.00, 'Blue Moon', 5.4, 'witbier'),
+    new Keg('Apricot Ale', 5.00, 'Pyramid', 5.1, 'fruit beer'),
+    new Keg('Black Butte', 5.00, 'Deschutes', 5.2, 'porter'),
+    new Keg('Duchesse De Bourgogne', 5.00, 'Brouwerij Verhaeghe', 6, 'red ale'),
   ];
 
   pushKeg(keg) {
     this.kegs.push(keg);
   }
-
 }

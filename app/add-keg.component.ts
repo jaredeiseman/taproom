@@ -31,7 +31,7 @@ export class AddKegComponent {
   @Output() clickSender = new EventEmitter();
 
   addKeg(form: NgForm) {
-    var newKeg = new Keg(form.value.name, form.value.price, form.value.brand, form.value['alcohol-content'], form.value.type);
+    var newKeg = new Keg(form.value.name, form.value.price, form.value.brand, form.value['alcohol-content'], form.value.type.toLowerCase());
 
     this.clickSender.emit(newKeg);
   }
