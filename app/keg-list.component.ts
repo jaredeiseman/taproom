@@ -5,7 +5,6 @@ import { Keg } from "./keg.model";
   selector: 'keg-list',
   template: `
   <div id="keg-list">
-    <h2>Keg List</h2>
     <div class="keg" *ngFor="let currentKeg of childKegList">
       <div class="description">
         <p class="title">{{currentKeg.brand}}<strong>{{currentKeg.name}}</strong></p>

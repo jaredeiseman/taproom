@@ -1,0 +1,94 @@
+#pos-add-customer-form {
+  margin-bottom: 20px;
+  input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  input[type="submit"] {
+    border-radius: 5px;
+    color: black;
+    background: white;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background .3s, color .3s, border .3s;
+    outline: 0;
+
+    &:hover {
+      background: black;
+      color: white;
+      border: 1px solid white;
+    }
+  }
+}
+.pos-container {
+  height: 80%;
+
+  .tab-details {
+    border: 1px solid white;
+    width: 20%;
+    height: 100%;
+    float: left;
+    font-size: 16px;
+    padding: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    ul {
+      list-style-type: none;
+    }
+  }
+  .customer-pos {
+    border: 1px solid white;
+    width: 80%;
+    float: right;
+    height: 20%;
+    button {
+      padding: 10px;
+      font-size: 18px;
+      margin: 20px;
+      border-radius: 5px;
+      color: black;
+      background: white;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background .3s, color .3s, border .3s;
+      outline: 0;
+
+      &.active {
+        background: #6565b7;
+        color: white;
+      }
+
+      &:hover {
+        background: black;
+        color: white;
+        border: 1px solid white;
+      }
+    }
+  }
+  .beer-pos {
+    border: 1px solid white;
+    height: 80%;
+    width: 80%;
+    float: right;
+    button {
+      padding: 20px;
+      font-size: 20px;
+      margin: 20px;
+      border-radius: 5px;
+      color: black;
+      background: white;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background .3s, color .3s, border .3s;
+      outline: 0;
+
+      &:hover {
+        background: black;
+        color: white;
+        border: 1px solid white;
+      }
+    }
+  }
+}

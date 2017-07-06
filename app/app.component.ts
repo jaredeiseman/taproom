@@ -11,6 +11,7 @@ import { Keg } from "./keg.model";
       <keg-list [childKegList]="kegs"></keg-list>
     </div>
     <div id="page-two">
+      <pos [childKegList]="kegs"></pos>
       <edit-keg [childKegList]="kegs"></edit-keg>
       <add-keg (clickSender)="pushKeg($event)"></add-keg>
     </div>
