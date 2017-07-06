@@ -1,0 +1,118 @@
+#page-two {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  edit-keg {
+    font-size: 20px;
+    margin-bottom: 40px;
+    h2 {
+      margin-bottom: 15px;
+    }
+    .edit-container {
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        &:nth-of-type(odd) {
+          background: #333;
+        }
+        span {
+          white-space: nowrap;
+          margin-right: 1px;
+          text-transform: capitalize;
+
+          input {
+            font-size: 18px;
+            padding: 5px;
+            width: 100%;
+          }
+
+          &:nth-of-type(1) {
+            width: 25%;
+          }
+          &:nth-of-type(2) {
+            width: 20%;
+          }
+          &:nth-of-type(3) {
+            width: 10%;
+          }
+          &:nth-of-type(4) {
+            width: 10%;
+          }
+          &:nth-of-type(5) {
+            width: 15%;
+          }
+          &:nth-of-type(6) {
+            width: 10%;
+          }
+          &:nth-of-type(7) {
+            width: 10%;
+          }
+        }
+        button {
+          padding: 10px;
+          width: 150px;
+          font-size: 18px;
+          background: white;
+          color: black;
+          border: 1px solid transparent;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: color .3s, background .3s, border .3s;
+
+          &:hover {
+            color: white;
+            background: black;
+            border: 1px solid white;
+          }
+        }
+      }
+    }
+  }
+
+  add-keg {
+    h2 {
+      font-size: 30px;
+    }
+    .column {
+      width: 49.5%;
+      float: left;
+
+      &:first-child {
+        margin-right: 1%;
+      }
+    }
+
+    input {
+      display: block;
+      padding: 15px;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 20px;
+    }
+
+    button[type="submit"] {
+      padding: 15px;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      margin-top: 50px;
+      font-size: 20px;
+      background: white;
+      color: black;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: background .3s, color .3s;
+
+      &:hover {
+        background: black;
+        color: white;
+        border: 1px solid white;
+      }
+    }
+  }
+}

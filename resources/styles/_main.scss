@@ -1,6 +1,6 @@
-.container {
+.container, #page-one {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   .logo-img {
     margin: 0 auto;

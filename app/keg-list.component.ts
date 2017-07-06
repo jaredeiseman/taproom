@@ -13,7 +13,7 @@ import { Keg } from "./keg.model";
       </div>
       <div class="details">
         <p class="price">{{currentKeg.price}}</p>
-        <p [class]="colorKeg(currentKeg)" class="pints"></p>
+        <p [class]="colorKeg(currentKeg)" class="pints"></p><span style="font-size: 10px;">{{currentKeg.pintsLeft}} / 124</span>
       </div>
     </div>
   </div>
